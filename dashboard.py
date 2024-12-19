@@ -86,9 +86,9 @@ def exploratory_analysis(df):
     st.subheader("Comparaison des performances des modèles")
 
     models = ['MLP', 'DistilBERT']
-    accuracy_scores = [0.6993, 0.8227]
-    f1_scores = [0.6785, 0.8228]
-    auc_scores = [0.7064, 0.8230]
+    accuracy_scores = [0.6841, 0.8229]
+    f1_scores = [0.6608, 0.8229]
+    auc_scores = [0.6853, 0.8229]
 
     # Création du graphique groupé
     x = np.arange(len(models))
@@ -108,7 +108,7 @@ def exploratory_analysis(df):
     plt.ylim(0.6, 0.9)
 
     st.pyplot(fig)
-    st.markdown("**Interprétation :** Ce graphique compare les performances des modèles MLP + Tf-idf et DistilBERT sur trois métriques : Accuracy, F1 Score et AUC. On observe que DistilBERT surpasse largement MLP dans toutes les métriques, indiquant une meilleure capacité à capturer les sentiments des tweets.")
+    st.markdown("**Interprétation :** Ce graphique compare les performances des modèles MLP et DistilBERT sur trois métriques : Accuracy, F1 Score et AUC. On observe que DistilBERT surpasse largement MLP dans toutes les métriques, indiquant une meilleure capacité à capturer les sentiments des tweets.")
 
 exploratory_analysis(df)
 
